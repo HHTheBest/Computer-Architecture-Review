@@ -8,15 +8,15 @@
 
   - 超标量：每个stage有多个指令并行执行（Superscalar）
 
-    ![image-20231221155115773](.\pics\4-1)
+    ![image-20231221155115773](C:\Users\84865\Desktop\mypro\Computer-Architecture-Review\pics\4-1)
 
   - superpipelined：把EX stage切了，相当于流水线的流水线。
 
-    ![image-20231221160055574](.\pics\4-2)
+    ![image-20231221160055574](C:\Users\84865\Desktop\mypro\Computer-Architecture-Review\pics\4-2)
 
   - VLIW：相当于一条指令字里面塞了很多个小指令，然后一个同时执行多个EX阶段
 
-    ![image-20231221160255412](.\pics\4-3)
+    ![image-20231221160255412](C:\Users\84865\Desktop\mypro\Computer-Architecture-Review\pics\4-3)
 
   - superscalar和superpipelined基本等效，只是时间和空间上的并行性
 
