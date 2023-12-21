@@ -1,7 +1,5 @@
 # 计算机体系结构第三章整理
 
-> C3：考hazard（哪三类讲清楚） scoreboard（画结构，给定example，填写前五个指令） 局限性->tomasulo(和scoreboard不一样，寄存器重命名，给定同一个例子用tomasulo来执行) 选择题 tomasulo vs scoreboard
-
 这里想把每一个PPT的知识点都过一下，最好不要漏。
 
 - 三种dependence
