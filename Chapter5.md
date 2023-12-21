@@ -1,24 +1,12 @@
-# 计算机体系结构第四章整理
+# 计算机体系结构第五章整理
 
-> C4：简答题：并行方法有哪些（超标量）  tomasulo+ROB（前五cycle） 主要可能考填空题之类的（VLIW的简写）
+> C5：画出memory层次，cache层次，cache作用， 冯诺依曼+寄存器+L1 L2 L3cache+memory cache优化方式 cache组织方式 miss cache vs victim cache dram架构
 
 这里想把每一个PPT的知识点都过一下，最好不要漏。
 
-- 几种ILP的method
+- memory层次的overview
 
-  - 超标量：每个stage有多个指令并行执行（Superscalar）
-
-    ![image-20231221155115773](C:\Users\84865\Desktop\mypro\Computer-Architecture-Review\pics\4-1)
-
-  - superpipelined：把EX stage切了，相当于流水线的流水线。
-
-    ![image-20231221160055574](C:\Users\84865\Desktop\mypro\Computer-Architecture-Review\pics\4-2)
-
-  - VLIW：相当于一条指令字里面塞了很多个小指令，然后一个同时执行多个EX阶段
-
-    ![image-20231221160255412](C:\Users\84865\Desktop\mypro\Computer-Architecture-Review\pics\4-3)
-
-  - superscalar和superpipelined基本等效，只是时间和空间上的并行性
+  ![image-20231221183303496](C:\Users\84865\Desktop\mypro\Computer-Architecture-Review\pics\5-1)
 
 - 分支预测
 
