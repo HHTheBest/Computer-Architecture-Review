@@ -6,35 +6,71 @@
 
 - memory层次的overview
 
-  ![image-20231221183303496](C:\Users\84865\Desktop\mypro\Computer-Architecture-Review\pics\5-1)
+  ![image-20231221183303496](pics/5-1.jpg)
 
-- 分支预测
+- cache的组成
 
-  - 静态：编译器可以去预测（比如基于profile数据和给定的数据）
-  - 动态：在程序运行的过程中分支条件可能发生变化
+  - tag：block的地址
+  - status：检验是否有效
+  - data：缓存的数据
 
-- Reorder Buffer(ROB)
+- 三种相联方式
 
-  - 指令格式（分支/ld st/ ALU）
-  - 存放的寄存器位置/内存位置
-  - Value：指令的结果
+  - 直接映射：每个cache line 都是一个set
+  - 全相联：block可以放在cache的任何位置
+  - 组相联：e.g.(4路组相联：每个组里能放四个cacheline)
   
-- Tomasulo+ROB
+- 虚存
 
-  - 要放到ROB里面来防止各种数据依赖和conflict
-  - 感觉这个过程比较难，需要在PPT里面仔细看清楚
-  - 感觉得结合一个视频才能看的懂
+  - 页表：把虚拟页映射到物理页上
   
-- VLIW
+- 内存/缓存优化
 
-  - Very Long Instruction Word
-  - 一条大语句里面有几个操作
+  - 时间局部性
+  - 空间局部性
+  - 算法局部性
 
-- EPIC
+- 缓存的两种cache模式
 
-  - Explicitly Parallel Instruction Computing
-  - VLIW的一个延申
+  - Miss cache相当于就是简单往L1和L2中间插了一个cache，而Victim cache相当于就是当一个buffer，把L1旧的value存下来，方便L1来换
+  
+- Miss Caching
+  
+  ![image-20231223105807716](pics/5-2.jpg)
+  
+- Victim Caching
+  
+    ![image-20231223105957122](pics/5-3.jpg)
+  
+- cache hit的时候写的policy
 
+  - Write-back（写回）：lazy的方式，modify暂时只写到cache上，在替换的时候才把脏块写到memory里
+  - Write-through（写直达/写穿）：对cache和对memory一起写
+
+- cache miss的时候写的policy
+
+  - Write allocate：将主存的block带到cache上并且更新
+  - no-write allocate：write miss不影响cache，直接写主存
+
+- DIMM（Dual in-line memory module）层次架构
+
+  - 每一个DIMM有一个或多个rank
+  - 每一个rank有一组DRAM Devices
+- 每一个DRAM device有一个或多个bank
+  - 每一个bank有一些memory array
+
+- 一些DRAM的其它知识
+
+  - Channel：MC和DRAM module之间的通道，也就是平时说的多少通道内存
+  - Dram chips上的xN表示DRAM至少有N个memory array在一个bank上，并且每一个列的宽度都是Nbits（一次传输N bits data）
+
+- Synchronous DRAMs（SDRAM）
+
+  - 用始终取代行和列上的RAS和CAS，获得更高数据传输率
+  
+- Double Data Rate(DDR) SDRAM
+
+  - 数据在一个时钟的两个沿（上升/下降）均会传输
   
 
   
