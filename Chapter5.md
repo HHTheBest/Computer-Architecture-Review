@@ -1,7 +1,5 @@
 # 计算机体系结构第五章整理
 
-> C5：画出memory层次，cache层次，cache作用， 冯诺依曼+寄存器+L1 L2 L3cache+memory cache优化方式 cache组织方式 miss cache vs victim cache dram架构
-
 这里想把每一个PPT的知识点都过一下，最好不要漏。
 
 - memory层次的overview
@@ -57,8 +55,9 @@
   - 每一个DIMM有一个或多个rank
   - 每一个rank有一组DRAM Devices
 - 每一个DRAM device有一个或多个bank
-  - 每一个bank有一些memory array
-
+  
+- 每一个bank有一些memory array
+  
 - 一些DRAM的其它知识
 
   - Channel：MC和DRAM module之间的通道，也就是平时说的多少通道内存

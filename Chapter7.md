@@ -1,7 +1,5 @@
 # 计算机体系结构第七章整理
 
-> C7：5分 列举Architecture simulation作用 GEM5 GPGPU_SIM 要简要阐述
-
 这里想把每一个PPT的知识点都过一下，最好不要漏。
 
 - 阿姆达尔定律
@@ -25,6 +23,7 @@
 
   - 把指令和地址的trace放入一个微架构timing simulator里面模拟
 - 把功能simulation和计时simulation分离开
+  
   - 缺点是需要trace file，以及在mis-predicted paths上不能有效做预测
   
 - Execution-Driven Simulation

@@ -1,7 +1,5 @@
 # 计算机体系结构第八章整理
 
-> C8：flynn分类 代表的并行性 multiprocessor的 内存架构P8 UMA和NUMA SMP和DSM比较 cache一致性问题 P29协议+为什么
-
 这里想把每一个PPT的知识点都过一下，最好不要漏。
 
 - Flynn分类
